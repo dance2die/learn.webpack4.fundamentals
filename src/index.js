@@ -1,3 +1,5 @@
-import Button from './button';
+import makeButton from './button';
 
-console.log(Button)
+const button = makeButton('<strong>👨‍🎤 Awesome Button! 👍</strong>');
+console.log(button);
+document.body.appendChild(button);

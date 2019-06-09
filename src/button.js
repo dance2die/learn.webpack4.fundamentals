@@ -1,8 +1,9 @@
-const button = name => {
-    const btn = document.createElement('button')
-    btn.name = name;
-    
-    return btn;
-}
+const makeButton = name => {
+  const btn = document.createElement('button');
+  btn.innerHTML = name;
+  btn.onclick = () => alert(name);
 
-export default button;
+  return btn;
+};
+
+export default makeButton;

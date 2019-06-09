@@ -1,6 +1,7 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = ({ mode }) => ({
+  devtool: 'source-map',
   mode,
   output: {
     path: `${__dirname}/dist`,
@@ -11,6 +12,10 @@ module.exports = ({ mode }) => ({
       {
         test: /\.css$/,
         use: ['style-loader', 'css-loader'],
+      },
+      {
+        test: /\.jsx?$/,
+        use: ['babel-loader'],
       },
     ],
   },
