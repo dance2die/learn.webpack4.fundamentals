@@ -17,6 +17,15 @@ const merged = ({ mode } = { mode: 'production' }) =>
       module: {
         rules: [
           {
+            test: /\.jpe?g/,
+            use: [
+              {
+                loader: 'url-loader',
+                options: { limit: 5000 },
+              },
+            ],
+          },
+          {
             test: /\.css$/,
             use: ['style-loader', 'css-loader'],
           },
